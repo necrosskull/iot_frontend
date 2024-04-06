@@ -50,13 +50,15 @@ const LampSwitches: React.FC = () => {
   };
 
   return (
-    <div className="bg-neutral-800 scale-150 p-4 rounded-lg space-y-2">
+    <div className="bg-neutral-300 scale-150 p-4 rounded-lg space-y-2 dark:bg-neutral-800 ">
       {lamps.map((lamp) => (
         <div
           key={lamp.name}
-          className="flex items-center bg-neutral-900 p-2 space-x-2 rounded-lg"
+          className="bg-neutral-100 flex items-center dark:bg-neutral-900 p-2 space-x-2 rounded-lg"
         >
-          <p className="font-bold text-2xl">{lamp.name}</p>
+          <p className="text-neutral-700 font-bold text-2xl dark:text-white">
+            {lamp.name}
+          </p>
           <Switch
             checked={lamp.status === "on"}
             onCheckedChange={() =>
